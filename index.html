@@ -154,8 +154,19 @@
             function ready() {
                 const video = document.getElementById('video');
                 video.play();
+
+                video.addEventListener('click', function () {
+                    this.play();
+                    console.log(222);
+                });
+
+                video.click();
             }
-            document.addEventListener('DOMContentLoaded', ready);
+
+            window.onload = function () {
+                ready();
+            };
+            // document.addEventListener('DOMContentLoaded', ready);
         </script>
     </body>
 </html>
